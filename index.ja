@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MATSTOREE PANEL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Header -->
+  <header class="text-center py-10 bg-gradient-to-r from-blue-600 to-indigo-700 shadow-lg">
+    <h1 class="text-4xl md:text-5xl font-extrabold">MATSTOREE PANEL</h1>
+    <p class="mt-3 text-lg md:text-xl text-gray-200">
+      Layanan Server Panel Pterodactyl untuk kebutuhan bot anda
+    </p>
+  </header>
+
+  <!-- Panel List -->
+  <main class="max-w-5xl mx-auto px-5 py-10">
+    <h2 class="text-2xl font-bold text-center mb-8">Daftar Paket Panel</h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Panel 1 -->
+      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold mb-3">Paket 5GB</h3>
+        <ul class="space-y-2 text-gray-300">
+          <li>💾 RAM: 5GB</li>
+          <li>📂 Disk: 5GB</li>
+          <li>⚙️ CPU: 150%</li>
+          <li>🌍 Region: Frankfurt am Main - Germany</li>
+        </ul>
+        <p class="mt-4 text-2xl font-bold text-blue-400">Rp 10.000</p>
+        <button class="mt-4 w-full py-2 rounded-xl bg-blue-600 hover:bg-blue-700 font-semibold">
+          Beli Sekarang
+        </button>
+      </div>
+
+      <!-- Panel 2 -->
+      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold mb-3">Paket 6GB</h3>
+        <ul class="space-y-2 text-gray-300">
+          <li>💾 RAM: 6GB</li>
+          <li>📂 Disk: 6GB</li>
+          <li>⚙️ CPU: 175%</li>
+          <li>🌍 Region: Frankfurt am Main - Germany</li>
+        </ul>
+        <p class="mt-4 text-2xl font-bold text-blue-400">Rp 15.000</p>
+        <button class="mt-4 w-full py-2 rounded-xl bg-blue-600 hover:bg-blue-700 font-semibold">
+          Beli Sekarang
+        </button>
+      </div>
+
+      <!-- Panel 3 -->
+      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold mb-3">Paket 7GB</h3>
+        <ul class="space-y-2 text-gray-300">
+          <li>💾 RAM: 7GB</li>
+          <li>📂 Disk: 7GB</li>
+          <li>⚙️ CPU: 200%</li>
+          <li>🌍 Region: Frankfurt am Main - Germany</li>
+        </ul>
+        <p class="mt-4 text-2xl font-bold text-blue-400">Rp 20.000</p>
+        <button class="mt-4 w-full py-2 rounded-xl bg-blue-600 hover:bg-blue-700 font-semibold">
+          Beli Sekarang
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Rules -->
+  <section class="bg-gray-800 py-10 mt-10">
+    <div class="max-w-4xl mx-auto px-5 text-center">
+      <h2 class="text-2xl font-bold mb-5">Informasi & Aturan</h2>
+      <div class="grid md:grid-cols-3 gap-6 text-gray-300">
+        <div class="bg-gray-900 p-5 rounded-xl shadow">
+          <h3 class="font-semibold text-blue-400 mb-2">Dukungan Teknis</h3>
+          <p>Tim siap membantu via WhatsApp 24/7.</p>
+        </div>
+        <div class="bg-gray-900 p-5 rounded-xl shadow">
+          <h3 class="font-semibold text-blue-400 mb-2">Garansi</h3>
+          <p>Garansi 30 hari sesuai syarat & ketentuan berlaku.</p>
+        </div>
+        <div class="bg-gray-900 p-5 rounded-xl shadow">
+          <h3 class="font-semibold text-blue-400 mb-2">Masa Aktif</h3>
+          <p>Paket berlaku sesuai durasi pembelian.</p>
+        </div>
+      </div>
+      <div class="mt-8 bg-red-900 p-5 rounded-xl shadow text-red-200">
+        <h3 class="font-bold text-red-400 mb-2">⚠️ Rules</h3>
+        <p>Dilarang menjalankan REST API berlebihan, DDOS, mining, dan aktivitas terlarang lainnya.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-gray-900 border-t border-gray-700 text-gray-400">
+    © 2025 MATSTOREE PANEL - All Rights Reserved
+  </footer>
+</body>
+</html>
