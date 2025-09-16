@@ -5,167 +5,151 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Server Official Matstoree</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    .font-header { font-family: 'Orbitron', sans-serif; }
-    .font-subheader { font-family: 'Roboto Slab', serif; }
-    .text-gradient {
-      color: #0ff;
-      text-shadow:
-        0 0 5px #0ff,
-        0 0 10px #0ff,
-        0 0 20px #0ff,
-        0 0 40px #0ff;
+    /* Background gradient animasi */
+    body {
+      background: linear-gradient(-45deg, #1e3a8a, #9333ea, #2563eb, #111827);
+      background-size: 400% 400%;
+      animation: gradientBG 20s ease infinite;
+      color: white;
+      font-family: sans-serif;
     }
-    .text-shadow {
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
   </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-  <header class="text-center py-10 bg-gradient-to-r from-purple-800 via-indigo-700 to-cyan-500 shadow-lg">
-    <h1 class="text-5xl md:text-6xl font-extrabold font-header text-gradient text-shadow">
-      𝐌𝐀𝐓𝐒.𝐓𝐎𝐑𝐄𝐄⚡
-    </h1>
-    <p class="mt-3 text-lg md:text-xl text-gray-200 font-subheader">
+<body>
+  <!-- Header -->
+  <header class="text-center py-10 bg-black/40 shadow-lg backdrop-blur-sm">
+    <h1 class="text-4xl md:text-5xl font-extrabold">𝐌𝐀𝐓𝐒.𝐓𝐎𝐑𝐄𝐄⚡</h1>
+    <p class="mt-3 text-lg md:text-xl text-gray-200">
       Layanan Server Panel Pterodactyl yang aman, terpercaya, dan siap mendukung kebutuhan bot Anda
     </p>
   </header>
 
-  <main class="max-w-6xl mx-auto px-5 py-10">
-    <h2 class="text-3xl font-bold text-center mb-8 font-header text-gradient text-shadow">Daftar Paket Panel</h2>
+  <!-- Panel List -->
+  <main class="max-w-5xl mx-auto px-5 py-10">
+    <h2 class="text-2xl font-bold text-center mb-8">Daftar Paket Panel</h2>
+
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
-        <h3 class="text-2xl font-semibold mb-3 font-header text-gradient">Paket 1GB</h3>
-        <ul class="space-y-2 text-gray-300 font-subheader">
-          <li>💾 RAM: 1024 MB</li>
-          <li>📂 Disk: 1024 MB</li>
-          <li>⚙️ CPU: 25%</li>
-          <li>🌍 Region: Frankfurt am Main - Germany</li>
-        </ul>
-        <p class="mt-4 text-2xl font-bold text-blue-400 font-header text-shadow">Rp 5.000</p>
-        <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%201GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold font-header text-shadow">Beli Sekarang</a>
-      </div>
-
-      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
-        <h3 class="text-2xl font-semibold mb-3 font-header text-gradient">Paket 2GB</h3>
-        <ul class="space-y-2 text-gray-300 font-subheader">
-          <li>💾 RAM: 2048 MB</li>
-          <li>📂 Disk: 2048 MB</li>
-          <li>⚙️ CPU: 50%</li>
-          <li>🌍 Region: Frankfurt am Main - Germany</li>
-        </ul>
-        <p class="mt-4 text-2xl font-bold text-blue-400 font-header text-shadow">Rp 7.000</p>
-        <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%202GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold font-header text-shadow">Beli Sekarang</a>
-      </div>
-
-      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
-        <h3 class="text-2xl font-semibold mb-3 font-header text-gradient">Paket 3GB</h3>
-        <ul class="space-y-2 text-gray-300 font-subheader">
-          <li>💾 RAM: 3072 MB</li>
-          <li>📂 Disk: 3072 MB</li>
-          <li>⚙️ CPU: 75%</li>
-          <li>🌍 Region: Frankfurt am Main - Germany</li>
-        </ul>
-        <p class="mt-4 text-2xl font-bold text-blue-400 font-header text-shadow">Rp 8.500</p>
-        <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%203GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold font-header text-shadow">Beli Sekarang</a>
-      </div>
-
-      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
-        <h3 class="text-2xl font-semibold mb-3 font-header text-gradient">Paket 4GB</h3>
-        <ul class="space-y-2 text-gray-300 font-subheader">
-          <li>💾 RAM: 4096 MB</li>
-          <li>📂 Disk: 4096 MB</li>
-          <li>⚙️ CPU: 100%</li>
-          <li>🌍 Region: Frankfurt am Main - Germany</li>
-        </ul>
-        <p class="mt-4 text-2xl font-bold text-blue-400 font-header text-shadow">Rp 10.000</p>
-        <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%204GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold font-header text-shadow">Beli Sekarang</a>
-      </div>
-
-      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
-        <h3 class="text-2xl font-semibold mb-3 font-header text-gradient">Paket 5GB</h3>
-        <ul class="space-y-2 text-gray-300 font-subheader">
+      <!-- Panel 5GB -->
+      <div class="bg-gray-800/80 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold mb-3">Paket 5GB</h3>
+        <ul class="space-y-2 text-gray-300">
           <li>💾 RAM: 5120 MB</li>
           <li>📂 Disk: 5120 MB</li>
-          <li>⚙️ CPU: 125%</li>
-          <li>🌍 Region: Frankfurt am Main - Germany</li>
-        </ul>
-        <p class="mt-4 text-2xl font-bold text-blue-400 font-header text-shadow">Rp 12.000</p>
-        <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%205GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold font-header text-shadow">Beli Sekarang</a>
-      </div>
-
-      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
-        <h3 class="text-2xl font-semibold mb-3 font-header text-gradient">Paket 6GB</h3>
-        <ul class="space-y-2 text-gray-300 font-subheader">
-          <li>💾 RAM: 6144 MB</li>
-          <li>📂 Disk: 6144 MB</li>
           <li>⚙️ CPU: 150%</li>
           <li>🌍 Region: Frankfurt am Main - Germany</li>
         </ul>
-        <p class="mt-4 text-2xl font-bold text-blue-400 font-header text-shadow">Rp 13.500</p>
-        <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%206GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold font-header text-shadow">Beli Sekarang</a>
+        <p class="mt-4 text-2xl font-bold text-blue-400">Rp 10.000</p>
+        <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%205GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold">
+          Beli Sekarang
+        </a>
       </div>
 
-      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
-        <h3 class="text-2xl font-semibold mb-3 font-header text-gradient">Paket 7GB</h3>
-        <ul class="space-y-2 text-gray-300 font-subheader">
-          <li>💾 RAM: 7168 MB</li>
-          <li>📂 Disk: 7168 MB</li>
+      <!-- Panel 6GB -->
+      <div class="bg-gray-800/80 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold mb-3">Paket 6GB</h3>
+        <ul class="space-y-2 text-gray-300">
+          <li>💾 RAM: 6144 MB</li>
+          <li>📂 Disk: 6144 MB</li>
           <li>⚙️ CPU: 175%</li>
           <li>🌍 Region: Frankfurt am Main - Germany</li>
         </ul>
-        <p class="mt-4 text-2xl font-bold text-blue-400 font-header text-shadow">Rp 15.000</p>
-        <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%207GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold font-header text-shadow">Beli Sekarang</a>
+        <p class="mt-4 text-2xl font-bold text-blue-400">Rp 15.000</p>
+        <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%206GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold">
+          Beli Sekarang
+        </a>
+      </div>
+
+      <!-- Panel 7GB -->
+      <div class="bg-gray-800/80 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold mb-3">Paket 7GB</h3>
+        <ul class="space-y-2 text-gray-300">
+          <li>💾 RAM: 7168 MB</li>
+          <li>📂 Disk: 7168 MB</li>
+          <li>⚙️ CPU: 200%</li>
+          <li>🌍 Region: Frankfurt am Main - Germany</li>
+        </ul>
+        <p class="mt-4 text-2xl font-bold text-blue-400">Rp 20.000</p>
+        <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%207GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold">
+          Beli Sekarang
+        </a>
       </div>
     </div>
   </main>
 
+  <!-- WhatsApp Official Section -->
   <section class="max-w-4xl mx-auto px-5 py-10 text-center">
-    <h2 class="text-2xl font-bold mb-5 text-green-400 font-header text-shadow">WhatsApp Official</h2>
-    <p class="text-gray-300 mb-6 font-subheader">Bergabung dengan grup atau channel resmi kami untuk info update, promo, dan support cepat!</p>
+    <h2 class="text-2xl font-bold mb-5 text-green-400">WhatsApp Official</h2>
+    <p class="text-gray-300 mb-6">
+      Bergabung dengan grup atau channel resmi kami untuk info update, promo, dan support cepat!
+    </p>
     <div class="flex flex-col md:flex-row justify-center gap-6">
-      <a href="https://chat.whatsapp.com/LVX1XPzfikLFxzNyPAbcKS" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-green-500 hover:bg-green-600 text-white font-semibold shadow-lg transition-transform hover:scale-105 font-header text-shadow">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-6 h-6"> Join Grup WhatsApp
+      <!-- Grup -->
+      <a href="https://chat.whatsapp.com/LVX1XPzfikLFxzNyPAbcKS" target="_blank"
+         class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-green-500 hover:bg-green-600 text-white font-semibold shadow-lg transition-transform hover:scale-105">
+         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-6 h-6">
+         Join Grup WhatsApp
       </a>
-      <a href="https://whatsapp.com/channel/0029VbAsXdtATRSmb6eNv932" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-green-400 hover:bg-green-500 text-white font-semibold shadow-lg transition-transform hover:scale-105 font-header text-shadow">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-6 h-6"> Join Channel WhatsApp
+      <!-- Channel -->
+      <a href="https://whatsapp.com/channel/0029VbAsXdtATRSmb6eNv932" target="_blank"
+         class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-green-400 hover:bg-green-500 text-white font-semibold shadow-lg transition-transform hover:scale-105">
+         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-6 h-6">
+         Join Channel WhatsApp
       </a>
     </div>
   </section>
 
-  <div class="mt-6 text-center text-gray-300 font-subheader">
-    <p>Ingin <strong>RAM, Disk, atau CPU</strong> sesuai kebutuhan Anda?  
-      <a href="https://wa.me/6282191987064" target="_blank" class="text-blue-400 font-semibold hover:underline">Hubungi owner langsung</a>
+  <!-- Info Request Custom -->
+  <div class="mt-6 text-center text-gray-300">
+    <p>
+      Ingin <strong>RAM, Disk, atau CPU</strong> sesuai kebutuhan Anda?  
+      <a href="https://wa.me/6282191987064" target="_blank" class="text-blue-400 font-semibold hover:underline">
+        Hubungi owner langsung
+      </a>
     </p>
   </div>
 
-  <section class="bg-gray-800 py-10 mt-10">
-    <div class="max-w-4xl mx-auto px-5 text-center font-subheader">
-      <h2 class="text-2xl font-bold mb-5 font-header text-gradient text-shadow">Informasi & Aturan</h2>
+  <!-- Rules -->
+  <section class="bg-gray-900/80 py-10 mt-10 rounded-2xl mx-5">
+    <div class="max-w-4xl mx-auto px-5 text-center">
+      <h2 class="text-2xl font-bold mb-5">Informasi & Aturan</h2>
       <div class="grid md:grid-cols-3 gap-6 text-gray-300">
         <div class="bg-gray-900 p-5 rounded-xl shadow">
-          <h3 class="font-semibold text-blue-400 mb-2 font-header">Dukungan Teknis</h3>
+          <h3 class="font-semibold text-blue-400 mb-2">Dukungan Teknis</h3>
           <p>Tim siap membantu via WhatsApp 24/7.</p>
         </div>
         <div class="bg-gray-900 p-5 rounded-xl shadow">
-          <h3 class="font-semibold text-blue-400 mb-2 font-header">Garansi</h3>
+          <h3 class="font-semibold text-blue-400 mb-2">Garansi</h3>
           <p>Garansi 30 hari sesuai syarat & ketentuan berlaku.</p>
         </div>
         <div class="bg-gray-900 p-5 rounded-xl shadow">
-          <h3 class="font-semibold text-blue-400 mb-2 font-header">Masa Aktif</h3>
-          <p>Paket berlaku sesuai durasi pembelian. Bisa perpanjang masa aktif tanpa ganti server/ip</p>
+          <h3 class="font-semibold text-blue-400 mb-2">Masa Aktif</h3>
+          <p>Paket berlaku sesuai durasi pembelian.</p>
         </div>
       </div>
-      <div class="mt-8 bg-red-900 p-5 rounded-xl shadow text-red-200">
-        <h3 class="font-bold text-red-400 mb-2 font-header">⚠️ Peraturan Penggunaan Panel</h3>
-        <p>Gunakan panel sesuai kebutuhan wajar, jangan melakukan request berlebihan atau otomatisasi berlebihan.<br>
+      <div class="mt-8 bg-red-900/80 p-5 rounded-xl shadow text-red-200">
+        <h3 class="font-bold text-red-400 mb-2">⚠️ Peraturan Penggunaan Panel</h3>
+        <p>
+          Gunakan panel sesuai kebutuhan wajar, jangan melakukan request berlebihan atau otomatisasi berlebihan.<br>
           Dilarang melakukan <strong>DDOS, mining, atau aktivitas ilegal/merugikan pihak lain</strong>.<br>
           Semua aktivitas akan <strong>diawasi</strong>, pelanggaran bisa berakibat <strong>suspend atau blokir akun</strong>.<br>
           Gunakan panel dengan <strong>tanggung jawab</strong> agar layanan tetap aman dan stabil untuk semua pengguna.
         </p>
       </div>
     </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-black/40 border-t border-gray-700 text-gray-300">
+    © 2025 MATSTOREE PANEL - All Rights Reserved
+  </footer>
+</body>
+</html>  </div>
   </section>
 
   <footer class="text-center py-6 bg-gray-900 border-t border-gray-700 text-gray-400 font-subheader">
