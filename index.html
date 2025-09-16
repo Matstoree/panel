@@ -20,30 +20,10 @@
     .text-shadow {
       text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
     }
-
-    /* 🔥 Background animasi gradient bergerak */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(270deg, #1e3a8a, #9333ea, #06b6d4, #f43f5e);
-      background-size: 800% 800%;
-      animation: gradientMove 20s ease infinite;
-      z-index: -1; /* supaya di belakang konten */
-    }
-
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
   </style>
 </head>
-<body class="text-white font-sans">
-  <!-- Header -->
-  <header class="text-center py-10 bg-black/50 shadow-lg">
+<body class="bg-gray-900 text-white font-sans">
+  <header class="text-center py-10 bg-gradient-to-r from-purple-800 via-indigo-700 to-cyan-500 shadow-lg">
     <h1 class="text-5xl md:text-6xl font-extrabold font-header text-gradient text-shadow">
       𝐌𝐀𝐓𝐒.𝐓𝐎𝐑𝐄𝐄⚡
     </h1>
@@ -52,12 +32,10 @@
     </p>
   </header>
 
-  <!-- Main -->
   <main class="max-w-6xl mx-auto px-5 py-10">
     <h2 class="text-3xl font-bold text-center mb-8 font-header text-gradient text-shadow">Daftar Paket Panel</h2>
     <div class="grid md:grid-cols-3 gap-6">
-      <!-- Paket 1GB -->
-      <div class="bg-gray-800/80 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
         <h3 class="text-2xl font-semibold mb-3 font-header text-gradient">Paket 1GB</h3>
         <ul class="space-y-2 text-gray-300 font-subheader">
           <li>💾 RAM: 1024 MB</li>
@@ -69,8 +47,7 @@
         <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%201GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold font-header text-shadow">Beli Sekarang</a>
       </div>
 
-      <!-- Paket 2GB -->
-      <div class="bg-gray-800/80 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
         <h3 class="text-2xl font-semibold mb-3 font-header text-gradient">Paket 2GB</h3>
         <ul class="space-y-2 text-gray-300 font-subheader">
           <li>💾 RAM: 2048 MB</li>
@@ -82,8 +59,7 @@
         <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%202GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold font-header text-shadow">Beli Sekarang</a>
       </div>
 
-      <!-- Paket 3GB -->
-      <div class="bg-gray-800/80 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
         <h3 class="text-2xl font-semibold mb-3 font-header text-gradient">Paket 3GB</h3>
         <ul class="space-y-2 text-gray-300 font-subheader">
           <li>💾 RAM: 3072 MB</li>
@@ -95,8 +71,7 @@
         <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%203GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold font-header text-shadow">Beli Sekarang</a>
       </div>
 
-      <!-- Paket 4GB -->
-      <div class="bg-gray-800/80 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
         <h3 class="text-2xl font-semibold mb-3 font-header text-gradient">Paket 4GB</h3>
         <ul class="space-y-2 text-gray-300 font-subheader">
           <li>💾 RAM: 4096 MB</li>
@@ -108,8 +83,7 @@
         <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%204GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold font-header text-shadow">Beli Sekarang</a>
       </div>
 
-      <!-- Paket 5GB -->
-      <div class="bg-gray-800/80 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
         <h3 class="text-2xl font-semibold mb-3 font-header text-gradient">Paket 5GB</h3>
         <ul class="space-y-2 text-gray-300 font-subheader">
           <li>💾 RAM: 5120 MB</li>
@@ -121,8 +95,7 @@
         <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%205GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold font-header text-shadow">Beli Sekarang</a>
       </div>
 
-      <!-- Paket 6GB -->
-      <div class="bg-gray-800/80 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
         <h3 class="text-2xl font-semibold mb-3 font-header text-gradient">Paket 6GB</h3>
         <ul class="space-y-2 text-gray-300 font-subheader">
           <li>💾 RAM: 6144 MB</li>
@@ -134,8 +107,7 @@
         <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%206GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold font-header text-shadow">Beli Sekarang</a>
       </div>
 
-      <!-- Paket 7GB -->
-      <div class="bg-gray-800/80 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
         <h3 class="text-2xl font-semibold mb-3 font-header text-gradient">Paket 7GB</h3>
         <ul class="space-y-2 text-gray-300 font-subheader">
           <li>💾 RAM: 7168 MB</li>
@@ -149,7 +121,6 @@
     </div>
   </main>
 
-  <!-- Info WhatsApp -->
   <section class="max-w-4xl mx-auto px-5 py-10 text-center">
     <h2 class="text-2xl font-bold mb-5 text-green-400 font-header text-shadow">WhatsApp Official</h2>
     <p class="text-gray-300 mb-6 font-subheader">Bergabung dengan grup atau channel resmi kami untuk info update, promo, dan support cepat!</p>
@@ -163,25 +134,30 @@
     </div>
   </section>
 
-  <!-- Info & Aturan -->
-  <section class="bg-gray-800/80 py-10 mt-10">
+  <div class="mt-6 text-center text-gray-300 font-subheader">
+    <p>Ingin <strong>RAM, Disk, atau CPU</strong> sesuai kebutuhan Anda?  
+      <a href="https://wa.me/6282191987064" target="_blank" class="text-blue-400 font-semibold hover:underline">Hubungi owner langsung</a>
+    </p>
+  </div>
+
+  <section class="bg-gray-800 py-10 mt-10">
     <div class="max-w-4xl mx-auto px-5 text-center font-subheader">
       <h2 class="text-2xl font-bold mb-5 font-header text-gradient text-shadow">Informasi & Aturan</h2>
       <div class="grid md:grid-cols-3 gap-6 text-gray-300">
-        <div class="bg-gray-900/80 p-5 rounded-xl shadow">
+        <div class="bg-gray-900 p-5 rounded-xl shadow">
           <h3 class="font-semibold text-blue-400 mb-2 font-header">Dukungan Teknis</h3>
           <p>Tim siap membantu via WhatsApp 24/7.</p>
         </div>
-        <div class="bg-gray-900/80 p-5 rounded-xl shadow">
+        <div class="bg-gray-900 p-5 rounded-xl shadow">
           <h3 class="font-semibold text-blue-400 mb-2 font-header">Garansi</h3>
           <p>Garansi 30 hari sesuai syarat & ketentuan berlaku.</p>
         </div>
-        <div class="bg-gray-900/80 p-5 rounded-xl shadow">
+        <div class="bg-gray-900 p-5 rounded-xl shadow">
           <h3 class="font-semibold text-blue-400 mb-2 font-header">Masa Aktif</h3>
           <p>Paket berlaku sesuai durasi pembelian. Bisa perpanjang masa aktif tanpa ganti server/ip</p>
         </div>
       </div>
-      <div class="mt-8 bg-red-900/80 p-5 rounded-xl shadow text-red-200">
+      <div class="mt-8 bg-red-900 p-5 rounded-xl shadow text-red-200">
         <h3 class="font-bold text-red-400 mb-2 font-header">⚠️ Peraturan Penggunaan Panel</h3>
         <p>Gunakan panel sesuai kebutuhan wajar, jangan melakukan request berlebihan atau otomatisasi berlebihan.<br>
           Dilarang melakukan <strong>DDOS, mining, atau aktivitas ilegal/merugikan pihak lain</strong>.<br>
@@ -192,8 +168,7 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="text-center py-6 bg-black/60 border-t border-gray-700 text-gray-300 font-subheader">
+  <footer class="text-center py-6 bg-gray-900 border-t border-gray-700 text-gray-400 font-subheader">
     © 2025 MATSTOREE PANEL - All Rights Reserved
   </footer>
 </body>
