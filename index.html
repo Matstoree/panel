@@ -3,173 +3,785 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Server Official Matstoree</title>
+  <title>MATS.TOREE ⚡ - Server Pterodactyl Panel Premium</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    .font-header { font-family: 'Orbitron', sans-serif; }
-    .font-subheader { font-family: 'Roboto Slab', serif; }
-    .text-gradient {
-      color: #0ff;
-      text-shadow:
-        0 0 5px #0ff,
-        0 0 10px #0ff,
-        0 0 20px #0ff,
-        0 0 40px #0ff;
+    * { 
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
     }
-    .text-shadow {
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    
+    .product-card {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 2px solid #e5e7eb;
+    }
+    
+    .product-card:hover {
+      border-color: #8b5cf6;
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px -12px rgba(139, 92, 246, 0.25);
+    }
+    
+    .badge-popular {
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 24px;
+      font-size: 12px;
+      font-weight: 700;
+      box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.4);
+      z-index: 10;
+    }
+    
+    .feature-icon {
+      transition: transform 0.3s ease;
+    }
+    
+    .feature-card:hover .feature-icon {
+      transform: scale(1.1);
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #8b5cf6, #6366f1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
   </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-  <header class="text-center py-10 bg-gradient-to-r from-purple-800 via-indigo-700 to-cyan-500 shadow-lg">
-    <h1 class="text-5xl md:text-6xl font-extrabold font-header text-gradient text-shadow">
-      𝐌𝐀𝐓𝐒.𝐓𝐎𝐑𝐄𝐄⚡
-    </h1>
-    <p class="mt-3 text-lg md:text-xl text-gray-200 font-subheader">
-      Layanan Server Panel Pterodactyl yang aman, terpercaya, dan siap mendukung kebutuhan bot Anda
-    </p>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-5 py-10">
-    <h2 class="text-3xl font-bold text-center mb-8 font-header text-gradient text-shadow">Daftar Paket Panel</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
-        <h3 class="text-2xl font-semibold mb-3 font-header text-gradient">Paket 1GB</h3>
-        <ul class="space-y-2 text-gray-300 font-subheader">
-          <li>💾 RAM: 1024 MB</li>
-          <li>📂 Disk: 1024 MB</li>
-          <li>⚙️ CPU: 25%</li>
-          <li>🌍 Region: Frankfurt am Main - Germany</li>
-        </ul>
-        <p class="mt-4 text-2xl font-bold text-blue-400 font-header text-shadow">Rp 5.000</p>
-        <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%201GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold font-header text-shadow">Beli Sekarang</a>
-      </div>
-
-      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
-        <h3 class="text-2xl font-semibold mb-3 font-header text-gradient">Paket 2GB</h3>
-        <ul class="space-y-2 text-gray-300 font-subheader">
-          <li>💾 RAM: 2048 MB</li>
-          <li>📂 Disk: 2048 MB</li>
-          <li>⚙️ CPU: 50%</li>
-          <li>🌍 Region: Frankfurt am Main - Germany</li>
-        </ul>
-        <p class="mt-4 text-2xl font-bold text-blue-400 font-header text-shadow">Rp 7.000</p>
-        <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%202GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold font-header text-shadow">Beli Sekarang</a>
-      </div>
-
-      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
-        <h3 class="text-2xl font-semibold mb-3 font-header text-gradient">Paket 3GB</h3>
-        <ul class="space-y-2 text-gray-300 font-subheader">
-          <li>💾 RAM: 3072 MB</li>
-          <li>📂 Disk: 3072 MB</li>
-          <li>⚙️ CPU: 75%</li>
-          <li>🌍 Region: Frankfurt am Main - Germany</li>
-        </ul>
-        <p class="mt-4 text-2xl font-bold text-blue-400 font-header text-shadow">Rp 8.500</p>
-        <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%203GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold font-header text-shadow">Beli Sekarang</a>
-      </div>
-
-      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
-        <h3 class="text-2xl font-semibold mb-3 font-header text-gradient">Paket 4GB</h3>
-        <ul class="space-y-2 text-gray-300 font-subheader">
-          <li>💾 RAM: 4096 MB</li>
-          <li>📂 Disk: 4096 MB</li>
-          <li>⚙️ CPU: 100%</li>
-          <li>🌍 Region: Frankfurt am Main - Germany</li>
-        </ul>
-        <p class="mt-4 text-2xl font-bold text-blue-400 font-header text-shadow">Rp 10.000</p>
-        <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%204GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold font-header text-shadow">Beli Sekarang</a>
-      </div>
-
-      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
-        <h3 class="text-2xl font-semibold mb-3 font-header text-gradient">Paket 5GB</h3>
-        <ul class="space-y-2 text-gray-300 font-subheader">
-          <li>💾 RAM: 5120 MB</li>
-          <li>📂 Disk: 5120 MB</li>
-          <li>⚙️ CPU: 125%</li>
-          <li>🌍 Region: Frankfurt am Main - Germany</li>
-        </ul>
-        <p class="mt-4 text-2xl font-bold text-blue-400 font-header text-shadow">Rp 12.000</p>
-        <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%205GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold font-header text-shadow">Beli Sekarang</a>
-      </div>
-
-      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
-        <h3 class="text-2xl font-semibold mb-3 font-header text-gradient">Paket 6GB</h3>
-        <ul class="space-y-2 text-gray-300 font-subheader">
-          <li>💾 RAM: 6144 MB</li>
-          <li>📂 Disk: 6144 MB</li>
-          <li>⚙️ CPU: 150%</li>
-          <li>🌍 Region: Frankfurt am Main - Germany</li>
-        </ul>
-        <p class="mt-4 text-2xl font-bold text-blue-400 font-header text-shadow">Rp 13.500</p>
-        <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%206GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold font-header text-shadow">Beli Sekarang</a>
-      </div>
-
-      <div class="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
-        <h3 class="text-2xl font-semibold mb-3 font-header text-gradient">Paket 7GB</h3>
-        <ul class="space-y-2 text-gray-300 font-subheader">
-          <li>💾 RAM: 7168 MB</li>
-          <li>📂 Disk: 7168 MB</li>
-          <li>⚙️ CPU: 175%</li>
-          <li>🌍 Region: Frankfurt am Main - Germany</li>
-        </ul>
-        <p class="mt-4 text-2xl font-bold text-blue-400 font-header text-shadow">Rp 15.000</p>
-        <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%207GB" target="_blank" class="mt-4 w-full inline-block py-2 rounded-xl bg-green-500 hover:bg-green-600 text-center font-semibold font-header text-shadow">Beli Sekarang</a>
+<body class="bg-gray-50">
+  
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md sticky top-0 z-50 backdrop-blur-lg bg-white/90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center">
+            <span class="text-white text-xl font-bold">⚡</span>
+          </div>
+          <div>
+            <h1 class="text-2xl font-black gradient-text">MATS.TOREE</h1>
+            <p class="text-xs text-gray-500">Premium Hosting</p>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#home" class="text-gray-700 hover:text-purple-600 font-medium transition-colors">Beranda</a>
+          <a href="#products" class="text-gray-700 hover:text-purple-600 font-medium transition-colors">Paket</a>
+          <a href="#features" class="text-gray-700 hover:text-purple-600 font-medium transition-colors">Fitur</a>
+          <a href="#faq" class="text-gray-700 hover:text-purple-600 font-medium transition-colors">FAQ</a>
+          <a href="https://wa.me/6282191987064" target="_blank" class="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-6 py-2.5 rounded-lg font-semibold transition-all shadow-lg hover:shadow-xl">
+            Hubungi Kami
+          </a>
+        </div>
       </div>
     </div>
-  </main>
+  </nav>
 
-  <section class="max-w-4xl mx-auto px-5 py-10 text-center">
-    <h2 class="text-2xl font-bold mb-5 text-green-400 font-header text-shadow">WhatsApp Official</h2>
-    <p class="text-gray-300 mb-6 font-subheader">Bergabung dengan grup atau channel resmi kami untuk info update, promo, dan support cepat!</p>
-    <div class="flex flex-col md:flex-row justify-center gap-6">
-      <a href="https://chat.whatsapp.com/F73kgNjE6DdBe5oBnYlQFi?mode=hqrt2" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-green-500 hover:bg-green-600 text-white font-semibold shadow-lg transition-transform hover:scale-105 font-header text-shadow">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-6 h-6"> Join Grup WhatsApp
-      </a>
-      <a href="https://whatsapp.com/channel/0029Vb6g8xuDTkK2scA7H21L" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-green-400 hover:bg-green-500 text-white font-semibold shadow-lg transition-transform hover:scale-105 font-header text-shadow">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-6 h-6"> Join Channel WhatsApp
-      </a>
+  <!-- Hero Section -->
+  <section id="home" class="relative overflow-hidden bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800 text-white">
+    <div class="absolute inset-0 bg-black/10"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+      <div class="text-center max-w-4xl mx-auto">
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2.5 rounded-full text-sm font-semibold mb-8 shadow-xl">
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+          🚀 Server Premium Frankfurt, Germany
+        </div>
+        <h2 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+          Server Pterodactyl<br/>Panel Terbaik
+        </h2>
+        <p class="text-xl md:text-2xl text-purple-100 mb-10 leading-relaxed max-w-3xl mx-auto">
+          Solusi hosting premium untuk bot Discord, WhatsApp, dan aplikasi Anda dengan performa tinggi, uptime 99.9%, dan harga terjangkau
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="#products" class="group inline-flex items-center gap-2 bg-white text-purple-600 px-10 py-4 rounded-xl font-bold hover:bg-gray-50 transition-all shadow-2xl hover:shadow-purple-500/50 hover:scale-105">
+            Lihat Paket
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+          <a href="https://wa.me/6282191987064" target="_blank" class="inline-flex items-center gap-2 bg-purple-500/20 backdrop-blur-md border-2 border-white/30 text-white px-10 py-4 rounded-xl font-bold hover:bg-purple-500/30 transition-all hover:scale-105">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            Chat WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"></div>
+  </section>
+
+  <!-- Trust Badges -->
+  <section class="bg-white py-12 border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-black gradient-text mb-2">24/7</div>
+          <div class="text-sm md:text-base text-gray-600 font-medium">Support Online</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-black gradient-text mb-2">99.9%</div>
+          <div class="text-sm md:text-base text-gray-600 font-medium">Uptime Server</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-black gradient-text mb-2">30</div>
+          <div class="text-sm md:text-base text-gray-600 font-medium">Hari Garansi</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <div class="mt-6 text-center text-gray-300 font-subheader">
-    <p>Ingin <strong>RAM, Disk, atau CPU</strong> sesuai kebutuhan Anda?  
-      <a href="https://wa.me/6282191987064" target="_blank" class="text-blue-400 font-semibold hover:underline">Hubungi owner langsung</a>
-    </p>
-  </div>
+  <!-- Products Section -->
+  <section id="products" class="py-24 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="inline-block bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-bold mb-4">
+          PAKET HOSTING
+        </div>
+        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">Pilih Paket Yang Sesuai</h2>
+        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          Semua paket sudah termasuk lokasi server di Frankfurt, Germany dengan koneksi super cepat dan support 24/7
+        </p>
+      </div>
 
-  <section class="bg-gray-800 py-10 mt-10">
-    <div class="max-w-4xl mx-auto px-5 text-center font-subheader">
-      <h2 class="text-2xl font-bold mb-5 font-header text-gradient text-shadow">Informasi & Aturan</h2>
-      <div class="grid md:grid-cols-3 gap-6 text-gray-300">
-        <div class="bg-gray-900 p-5 rounded-xl shadow">
-          <h3 class="font-semibold text-blue-400 mb-2 font-header">Dukungan Teknis</h3>
-          <p>Tim siap membantu via WhatsApp 24/7.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Product 1GB -->
+        <div class="product-card bg-white rounded-2xl p-8 shadow-lg">
+          <div class="mb-6">
+            <span class="inline-block bg-purple-100 text-purple-700 text-xs font-bold px-3 py-1.5 rounded-full mb-4">STARTER</span>
+            <h3 class="text-3xl font-black text-gray-900 mb-2">1GB RAM</h3>
+            <div class="flex items-baseline gap-2">
+              <span class="text-5xl font-black text-gray-900">5K</span>
+              <span class="text-gray-500 text-lg font-medium">/bulan</span>
+            </div>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">125% CPU</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">Germany 🇩🇪</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%205GB" target="_blank" class="block w-full text-center bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-xl hover:scale-105">
+            Beli Sekarang
+          </a>
         </div>
-        <div class="bg-gray-900 p-5 rounded-xl shadow">
-          <h3 class="font-semibold text-blue-400 mb-2 font-header">Garansi</h3>
-          <p>Garansi 30 hari sesuai syarat & ketentuan berlaku.</p>
+
+        <!-- Product 6GB -->
+        <div class="product-card bg-white rounded-2xl p-8 shadow-lg">
+          <div class="mb-6">
+            <span class="inline-block bg-pink-100 text-pink-700 text-xs font-bold px-3 py-1.5 rounded-full mb-4">PREMIUM</span>
+            <h3 class="text-3xl font-black text-gray-900 mb-2">6GB RAM</h3>
+            <div class="flex items-baseline gap-2">
+              <span class="text-5xl font-black text-gray-900">13.5K</span>
+              <span class="text-gray-500 text-lg font-medium">/bulan</span>
+            </div>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">6144 MB RAM</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">6144 MB Disk</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">150% CPU</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">Germany 🇩🇪</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%206GB" target="_blank" class="block w-full text-center bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-xl hover:scale-105">
+            Beli Sekarang
+          </a>
         </div>
-        <div class="bg-gray-900 p-5 rounded-xl shadow">
-          <h3 class="font-semibold text-blue-400 mb-2 font-header">Masa Aktif</h3>
-          <p>Paket berlaku sesuai durasi pembelian. Bisa perpanjang masa aktif tanpa ganti server/ip</p>
+
+        <!-- Product 7GB -->
+        <div class="product-card bg-white rounded-2xl p-8 shadow-lg">
+          <div class="mb-6">
+            <span class="inline-block bg-red-100 text-red-700 text-xs font-bold px-3 py-1.5 rounded-full mb-4">ULTIMATE</span>
+            <h3 class="text-3xl font-black text-gray-900 mb-2">7GB RAM</h3>
+            <div class="flex items-baseline gap-2">
+              <span class="text-5xl font-black text-gray-900">15K</span>
+              <span class="text-gray-500 text-lg font-medium">/bulan</span>
+            </div>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">7168 MB RAM</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">7168 MB Disk</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">175% CPU</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">Germany 🇩🇪</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%207GB" target="_blank" class="block w-full text-center bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-xl hover:scale-105">
+            Beli Sekarang
+          </a>
+        </div>
+
+        <!-- Custom Package -->
+        <div class="product-card bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-700 rounded-2xl p-8 shadow-lg text-white">
+          <div class="mb-6">
+            <span class="inline-block bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full mb-4">CUSTOM</span>
+            <h3 class="text-3xl font-black mb-2">Custom</h3>
+            <div class="flex items-baseline gap-2">
+              <span class="text-5xl font-black">Nego</span>
+            </div>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="font-medium">Custom RAM</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="font-medium">Custom Disk</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="font-medium">Custom CPU</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="font-medium">Germany 🇩🇪</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membuat%20Paket%20Custom" target="_blank" class="block w-full text-center bg-white text-purple-700 font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-xl hover:scale-105 hover:bg-gray-50">
+            Hubungi Kami
+          </a>
         </div>
       </div>
-      <div class="mt-8 bg-red-900 p-5 rounded-xl shadow text-red-200">
-        <h3 class="font-bold text-red-400 mb-2 font-header">⚠️ Peraturan Penggunaan Panel</h3>
-        <p>Gunakan panel sesuai kebutuhan wajar, jangan melakukan request berlebihan atau otomatisasi berlebihan.<br>
-          Dilarang melakukan <strong>DDOS, mining, atau aktivitas ilegal/merugikan pihak lain</strong>.<br>
-          Semua aktivitas akan <strong>diawasi</strong>, pelanggaran bisa berakibat <strong>suspend atau blokir akun</strong>.<br>
-          Gunakan panel dengan <strong>tanggung jawab</strong> agar layanan tetap aman dan stabil untuk semua pengguna.
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="inline-block bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-bold mb-4">
+          KEUNGGULAN
+        </div>
+        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">Kenapa Pilih Kami?</h2>
+        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          Dapatkan pengalaman hosting terbaik dengan teknologi terkini dan support yang responsif
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="feature-card bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-8 border-2 border-purple-100 hover:border-purple-300 transition-all">
+          <div class="feature-icon w-16 h-16 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Performa Tinggi</h3>
+          <p class="text-gray-600">Server dengan spesifikasi premium dan optimasi maksimal untuk aplikasi Anda berjalan dengan lancar.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border-2 border-green-100 hover:border-green-300 transition-all">
+          <div class="feature-icon w-16 h-16 bg-gradient-to-br from-green-600 to-emerald-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Uptime 99.9%</h3>
+          <p class="text-gray-600">Jaminan server selalu online dengan monitoring 24/7 dan backup otomatis setiap hari.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border-2 border-blue-100 hover:border-blue-300 transition-all">
+          <div class="feature-icon w-16 h-16 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Support 24/7</h3>
+          <p class="text-gray-600">Tim support kami siap membantu Anda kapan saja melalui WhatsApp dan ticket system.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 border-2 border-orange-100 hover:border-orange-300 transition-all">
+          <div class="feature-icon w-16 h-16 bg-gradient-to-br from-orange-600 to-red-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Keamanan Terjamin</h3>
+          <p class="text-gray-600">Proteksi DDoS, firewall advanced, dan enkripsi data untuk keamanan maksimal.</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-8 border-2 border-pink-100 hover:border-pink-300 transition-all">
+          <div class="feature-icon w-16 h-16 bg-gradient-to-br from-pink-600 to-rose-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Harga Terjangkau</h3>
+          <p class="text-gray-600">Paket hosting dengan harga kompetitif dan berbagai pilihan sesuai kebutuhan Anda.</p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 border-2 border-indigo-100 hover:border-indigo-300 transition-all">
+          <div class="feature-icon w-16 h-16 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Panel Mudah</h3>
+          <p class="text-gray-600">Pterodactyl Panel yang user-friendly dengan interface yang mudah dipahami pemula.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-24 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="inline-block bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-bold mb-4">
+          FAQ
+        </div>
+        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">Pertanyaan Umum</h2>
+        <p class="text-lg text-gray-600">Temukan jawaban untuk pertanyaan yang sering diajukan</p>
+      </div>
+
+      <div class="space-y-4">
+        <details class="group bg-white rounded-xl p-6 shadow-sm border-2 border-gray-100 hover:border-purple-300 transition-all">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-bold text-lg text-gray-900">
+            Bagaimana cara melakukan pembayaran?
+            <svg class="w-5 h-5 text-purple-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-600 leading-relaxed">Anda dapat melakukan pembayaran melalui transfer bank, e-wallet (Dana, OVO, GoPay), atau QRIS. Setelah pembayaran, kirimkan bukti transfer ke WhatsApp kami untuk aktivasi cepat.</p>
+        </details>
+
+        <details class="group bg-white rounded-xl p-6 shadow-sm border-2 border-gray-100 hover:border-purple-300 transition-all">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-bold text-lg text-gray-900">
+            Berapa lama waktu aktivasi setelah pembayaran?
+            <svg class="w-5 h-5 text-purple-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-600 leading-relaxed">Server akan diaktifkan maksimal 1-5 menit setelah pembayaran dikonfirmasi. Kami juga akan mengirimkan detail akses panel ke WhatsApp Anda.</p>
+        </details>
+
+        <details class="group bg-white rounded-xl p-6 shadow-sm border-2 border-gray-100 hover:border-purple-300 transition-all">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-bold text-lg text-gray-900">
+            Apakah ada garansi uang kembali?
+            <svg class="w-5 h-5 text-purple-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-600 leading-relaxed">Ya, kami menawarkan garansi uang kembali 30 hari jika Anda tidak puas dengan layanan kami. Syarat dan ketentuan berlaku.</p>
+        </details>
+
+        <details class="group bg-white rounded-xl p-6 shadow-sm border-2 border-gray-100 hover:border-purple-300 transition-all">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-bold text-lg text-gray-900">
+            Apakah bisa upgrade paket?
+            <svg class="w-5 h-5 text-purple-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-600 leading-relaxed">Tentu saja! Anda bisa upgrade paket kapan saja dengan membayar selisih harga. Data Anda akan tetap aman dan tidak akan hilang.</p>
+        </details>
+
+        <details class="group bg-white rounded-xl p-6 shadow-sm border-2 border-gray-100 hover:border-purple-300 transition-all">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-bold text-lg text-gray-900">
+            Apa yang bisa di-hosting di server ini?
+            <svg class="w-5 h-5 text-purple-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-600 leading-relaxed">Anda bisa meng-hosting bot Discord, bot WhatsApp, bot Telegram, aplikasi Node.js, Python, dan berbagai aplikasi lainnya yang kompatibel dengan Pterodactyl Panel.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-black/10"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl md:text-5xl font-black mb-6">Siap Memulai?</h2>
+      <p class="text-xl md:text-2xl text-purple-100 mb-10 leading-relaxed">
+        Dapatkan server premium Anda sekarang dan rasakan perbedaannya!
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#products" class="inline-flex items-center justify-center gap-2 bg-white text-purple-600 px-10 py-4 rounded-xl font-bold hover:bg-gray-50 transition-all shadow-2xl hover:scale-105">
+          Pilih Paket
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+        <a href="https://wa.me/6282191987064" target="_blank" class="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-xl font-bold transition-all shadow-2xl hover:scale-105">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Chat Sekarang
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <!-- Brand -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center">
+              <span class="text-white text-xl font-bold">⚡</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-black gradient-text">MATS.TOREE</h3>
+              <p class="text-xs text-gray-400">Premium Hosting</p>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm">
+            Penyedia layanan server Pterodactyl Panel premium dengan lokasi di Frankfurt, Germany. Uptime 99.9% dan support 24/7.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#home" class="text-gray-400 hover:text-white transition">Beranda</a></li>
+            <li><a href="#products" class="text-gray-400 hover:text-white transition">Paket</a></li>
+            <li><a href="#features" class="text-gray-400 hover:text-white transition">Fitur</a></li>
+            <li><a href="#faq" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="text-lg font-bold mb-4">Hubungi Kami</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-center gap-2 text-gray-400">
+              <svg class="w-5 h-5 text-purple-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              </svg>
+              <a href="https://wa.me/6282191987064" target="_blank" class="hover:text-white transition">+62 821-9198-7064</a>
+            </li>
+            <li class="flex items-center gap-2 text-gray-400">
+              <svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span>Frankfurt, Germany 🇩🇪</span>
+            </li>
+            <li class="flex items-center gap-2 text-gray-400">
+              <svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span>Support 24/7</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-8 text-center">
+        <p class="text-gray-400 text-sm">
+          &copy; 2024 MATS.TOREE. All rights reserved. Made with ❤️ for the community.
         </p>
       </div>
     </div>
-  </section>
-
-  <footer class="text-center py-6 bg-gray-900 border-t border-gray-700 text-gray-400 font-subheader">
-    © 2025 MATSTOREE PANEL - All Rights Reserved
   </footer>
+
 </body>
-</html>
+</html>="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">1024 MB RAM</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">1024 MB Disk</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">25% CPU</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">Germany 🇩🇪</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%201GB" target="_blank" class="block w-full text-center bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-xl hover:scale-105">
+            Beli Sekarang
+          </a>
+        </div>
+
+        <!-- Product 2GB -->
+        <div class="product-card bg-white rounded-2xl p-8 shadow-lg">
+          <div class="mb-6">
+            <span class="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1.5 rounded-full mb-4">BASIC</span>
+            <h3 class="text-3xl font-black text-gray-900 mb-2">2GB RAM</h3>
+            <div class="flex items-baseline gap-2">
+              <span class="text-5xl font-black text-gray-900">7K</span>
+              <span class="text-gray-500 text-lg font-medium">/bulan</span>
+            </div>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">2048 MB RAM</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">2048 MB Disk</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">50% CPU</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">Germany 🇩🇪</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%202GB" target="_blank" class="block w-full text-center bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-xl hover:scale-105">
+            Beli Sekarang
+          </a>
+        </div>
+
+        <!-- Product 3GB - POPULAR -->
+        <div class="product-card bg-white rounded-2xl p-8 shadow-lg relative ring-4 ring-green-500">
+          <div class="badge-popular">⭐ POPULAR</div>
+          <div class="mb-6">
+            <span class="inline-block bg-green-100 text-green-700 text-xs font-bold px-3 py-1.5 rounded-full mb-4">RECOMMENDED</span>
+            <h3 class="text-3xl font-black text-gray-900 mb-2">3GB RAM</h3>
+            <div class="flex items-baseline gap-2">
+              <span class="text-5xl font-black text-gray-900">8.5K</span>
+              <span class="text-gray-500 text-lg font-medium">/bulan</span>
+            </div>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">3072 MB RAM</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">3072 MB Disk</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">75% CPU</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">Germany 🇩🇪</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%203GB" target="_blank" class="block w-full text-center bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-xl hover:scale-105">
+            Beli Sekarang
+          </a>
+        </div>
+
+        <!-- Product 4GB -->
+        <div class="product-card bg-white rounded-2xl p-8 shadow-lg">
+          <div class="mb-6">
+            <span class="inline-block bg-orange-100 text-orange-700 text-xs font-bold px-3 py-1.5 rounded-full mb-4">ADVANCED</span>
+            <h3 class="text-3xl font-black text-gray-900 mb-2">4GB RAM</h3>
+            <div class="flex items-baseline gap-2">
+              <span class="text-5xl font-black text-gray-900">10K</span>
+              <span class="text-gray-500 text-lg font-medium">/bulan</span>
+            </div>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">4096 MB RAM</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">4096 MB Disk</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">100% CPU</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">Germany 🇩🇪</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/6282191987064?text=Saya%20ingin%20membeli%20Paket%204GB" target="_blank" class="block w-full text-center bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-xl hover:scale-105">
+            Beli Sekarang
+          </a>
+        </div>
+
+        <!-- Product 5GB -->
+        <div class="product-card bg-white rounded-2xl p-8 shadow-lg">
+          <div class="mb-6">
+            <span class="inline-block bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1.5 rounded-full mb-4">PRO</span>
+            <h3 class="text-3xl font-black text-gray-900 mb-2">5GB RAM</h3>
+            <div class="flex items-baseline gap-2">
+              <span class="text-5xl font-black text-gray-900">12K</span>
+              <span class="text-gray-500 text-lg font-medium">/bulan</span>
+            </div>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">5120 MB RAM</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium">5120 MB Disk</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class
